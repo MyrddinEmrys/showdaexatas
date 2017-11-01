@@ -169,8 +169,8 @@ form.login a:hover{
   margin: auto;
   position: absolute;
   right: 17%;
-  /* width: 135%; */
-  width: 90%;
+  width: 135%;
+  /* width: 90%; */
 }
 .question{
   background: #75ba48;
