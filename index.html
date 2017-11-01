@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,196 +12,81 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#section5">SHOW DA EXATAS</a>
-      </div>
-
-      <div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="#section1">Quiz</a></li>
-            <li><a href="#section2">Ranking</a></li>
-            <li><a href="#section3">Contato</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Reforce seu Estudo<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#section41">Números e Operações</a></li>
-                <li><a href="#section42">Grandeza e Medidas</a></li>
-                <li><a href="#section43">Espaço e forma</a></li>
-              </ul>
-            </li>
-            <li><a href="#section5">Saiba +</a></li>
-          </ul>
-        </div>
-      </div>
+  <div class="container">
+    <div class="logo"><br>
+      <span>
+        <center><img src="https://www.teachme.com/images/mathgames-logo.png"></a></center>
+      </span>
     </div>
-  </nav>
 
-  <div id="section1" class="container-fluid bg-info">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4><span class="label label-warning" id="qid">1</span>  Sabe-se que no sistema de numeração romano usa-se apenas sete letras (I, V, X, L, C, D e M) todas em maiúsculo para representar qualquer número inteiro. Neste sistema de numeração, usa-se um travessão sobre as letras para indicar:</h4>
-        </div>
-        <div class="modal-body">
-            <div class="col-xs-3 col-xs-offset-5">
-               <div id="loadbar" style="display: none;">
-                  <div class="blockG" id="rotateG_01"></div>
-                  <div class="blockG" id="rotateG_02"></div>
-                  <div class="blockG" id="rotateG_03"></div>
-                  <div class="blockG" id="rotateG_04"></div>
-                  <div class="blockG" id="rotateG_05"></div>
-                  <div class="blockG" id="rotateG_06"></div>
-                  <div class="blockG" id="rotateG_07"></div>
-                  <div class="blockG" id="rotateG_08"></div>
-              </div>
+    <div class="row"><br><br>
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="loader">
+          <div class="col-xs-3 col-xs-offset-5">
+            <div id="loadbar" style="display: none;">
+                <!-- <img src="https://8finatics.s3.amazonaws.com/static/reload_emi.gif" alt="Loading" class="center-block loanParamsLoader" style=""> -->
+                <img src="/Applications/MAMP/htdocs/showdaexatas/assets/images/desktop/fibLoading.gif" alt="Loading" class="center-block loanParamsLoader" style="">
+            </div>
           </div>
-          <div class="quiz" id="quiz" data-toggle="buttons">
-            <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">1-)  que o número representado pelas letras seria dividido por mil</label>
 
-            <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">2-)  que o número representado pelas letras seria dividido por cem</label>
-
-            <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">3-)  que o número representado pelas letras ficaria entre vírgulas</label>
-
-            <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">4-)  que o número representado pelas letras seria multiplicado por mil</label>
-
-            <label class="element-animation5 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="5">5-)  que o número representado pelas letras seria multiplicado por cem</label>
+          <div id="quiz">              
+            <div class="question">
+              <h3><span class="label label-warning" id="qid">1</span>
+              <span id="question">Quanto é 5% de 200,00 reais?</span>
+              </h3>
+            </div>
+            <ul>
+              <li>
+                <input type="radio" id="f-option" name="selector" value="1">
+                <label for="f-option" class="element-animation">30</label>
+                <div class="check"></div>
+              </li>
+              
+              <li>
+                <input type="radio" id="s-option" name="selector" value="2">
+                <label for="s-option" class="element-animation">10</label>
+                <div class="check"><div class="inside"></div></div>
+              </li>
+              
+              <li>
+                <input type="radio" id="t-option" name="selector" value="3">
+                <label for="t-option" class="element-animation">20</label>
+                <div class="check"><div class="inside"></div></div>
+              </li>
+            </ul>
           </div>
+
         </div>
-        <div class="modal-footer text-muted">
+
+        <div class="text-muted">
           <span id="answer"></span>
         </div>
+
       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div id="result-of-question" class="pulse animated" style="display: none;">
+          <span id="totalCorrect" class="pull-right"></span>
+          <table class="table table-hover table-responsive">
+            <thead>
+              <tr>
+                <th>Questão nº</th>
+                <th>Altenativa correta</th>
+                <th>Sua resposta</th>
+                <th>Resultado</th>
+              </tr>
+            </thead>
+            <tbody id="quizResult"></tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div id="section2" class="container-fluid">
-    <table class="table table-hover table-inverse">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>E-mail</th>
-          <th>Idade</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>abc@mdo.com</td>
-          <td>9 anos</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>123@fat.com.br</td>
-          <td>10 anos</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Isaac</td>
-          <td>8 anos</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Conan</td>
-          <td>google@gmail.com</td>
-          <td>11 anos</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Pitagoras</td>
-          <td colspan="2">microsoft@hotmail.com.br</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div id="section3" class="container-fluid">
-    <form class="rounded">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label for="exampleSelect1">Example select</label>
-        <select class="form-control" id="exampleSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="exampleTextarea">Example textarea</label>
-        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-      </div>
-      <fieldset class="form-group">
-        <legend>Radio buttons</legend>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-            Option one is this and that&mdash;be sure to include why it's great
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-            Option two can be something else and selecting it will deselect option one
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
-            Option three can be something else and selecting
-          </label>
-        </div>
-      </fieldset>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
-
-  <div id="section41" class="container-fluid">
-      <h3>Compreender o sistema de numeração decimal e o valor posicional dos algarismos e fazer cálculos com números grandes é competência do bloco Números e Operações</h3>
-      <p>Para entender o raciocínio da turma ao escolher uma das alternativas incorretas, vale lembrar que o nosso sistema numérico é posicional, ou seja, se obtém o valor de cada algarismo multiplicando-o por certa potência de 10. No caso da população de Corumbá, a posição que o 9 ocupa esconde uma multiplicação por um múltiplo de 10 (9 foi multiplicado por 10 mil).</p>
-      <p>Mas na hora de expressar esse valor por escrito ou na forma oral, o sistema é aditivo e multiplicativo: 90 + 5 x 1.000, 7 x 100 + 4 (noventa e cinco mil setecentos e quatro). Para responder corretamente à questão, é preciso fazer essa relação. Se o tema não foi bem tratado em sala, surgem dúvidas. É possível que o estudante se confunda e, pensando aditivamente, ache, por exemplo, que 704 é a representação numérica de setenta e quatro.</p>
-  </div>
-
-  <div id="section42" class="container-fluid">
-      <h3>As grandezas e as medidas estão presentes em nossa sociedade desde a antiguidade. Graças ao Sistema Internacional de Unidades (SI) sua padronização foi possível.</h3>
-      <p>A matemática pode ser considerada uma grande invenção que foi sendo estruturada ao longo dos séculos. Suas formulações e conjecturas surgiram para suprir as demandas sociais e científicas da nossa sociedade, um exemplo disso são as grandezas e as medidas.</p>
-      <p>Em algum momento, ao logo da história, o homem sentiu a necessidade de determinar padrões referentes a grandezas e medidas e foi da comparação entre as grandezas de mesma origem que surgiu as ideias relacionadas à medida. Começamos a medir utilizando as partes do corpo, como palmos, pés, dedos. Em determinadas civilizações, as medidas referentes ao corpo do rei eram adotadas como padrão para as medições.</p>
-  </div>
-
-  <div id="section43" class="container-fluid">
-      <h3>Para responder às questões sobre Espaço e Forma, os alunos necessitam ter participado de situações envolvendo figuras bi e tridimensionais e localização</h3>
-      <p>Dentro desse descritor, as perguntas ficam mais complexas quando, além da identificação de expressões usadas no dia a dia, como "à direita" e "à esquerda" em exemplos simples, entram em cena outros elementos gráficos, como a malha quadriculada, presente num mapa (veja o exemplo 2 no quadro abaixo). Nesse caso, explica Edda Curi, a localização varia de acordo com a determinação de pontos de referência e o número deles depende da situação dada no enunciado. "Uma só informação não é suficiente para chegar à localização. É necessário identificar duas."</p>
-  </div>
-
-  <div id="section5" class="container-fluid">
-      <h3>SAIBA MAIS</h3>
-      <p>Para entender o raciocínio da turma ao escolher uma das alternativas incorretas, vale lembrar que o nosso sistema numérico é posicional, ou seja, se obtém o valor de cada algarismo multiplicando-o por certa potência de 10. No caso da população de Corumbá, a posição que o 9 ocupa esconde uma multiplicação por um múltiplo de 10 (9 foi multiplicado por 10 mil).</p>
-  </div>
-
-  <footer class="footer">2017 - Show da Exatas.</footer>
+  <br><br><br>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
